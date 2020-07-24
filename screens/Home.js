@@ -27,15 +27,15 @@ export default function Home(props) {
     },
     { title: 'Not So "Final" Fantasy', rating: 3, body: "lorem ipsum", key: 3 },
   ]);
-console.log(reviews,"r")
   return (
     <View>
       <FlatList
         data={reviews}
         renderItem={({ item }) => (
-          <TouchableOpacity 
-          onPress={() => props.navigation.navigate("About", item)}
-          >
+            <TouchableOpacity 
+            onPress={()=> props.navigation.navigate({name: 'About', params: {item}})}>
+   
+          
             <Text>{item.title}</Text>
           </TouchableOpacity>
         )}

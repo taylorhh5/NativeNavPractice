@@ -1,16 +1,19 @@
-import React from 'react'
-import { View, Text, StyleSheet, Button } from 'react-native'
+import React from "react";
+import { View, Text, StyleSheet, Button } from "react-native";
 // import {globalStyles} from '../styles/global'
 
+export default function About({ navigation, route }) {
+  const { item } = route.params;
+  console.log(route, "route in about");
 
-export default function About(props) {
-    return (
-        <View>
-            <Text>About Screen</Text>
-                  <Button title="Home page" onPress={() => props.navigation.push("Home")} />
-
-        </View>
-    )
+  return (
+    <View>
+      <Text>About Screen</Text>
+      <Button title="Home page" onPress={() => navigation.push("Home")} />
+      {/* <Text>{route.params.item.title}</Text> */}
+      {route.params ? <Text>{item.title}</Text> : null}
+    </View>
+  );
 }
 
 // const styles=StyleSheet.create({
