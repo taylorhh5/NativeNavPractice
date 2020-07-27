@@ -29,6 +29,10 @@ export default function Home(props) {
   ]);
   return (
     <View>
+<Button  title="Review Details"   onPress={()=> props.navigation.push("Review")}/>
+          
+            <Text>Review</Text>
+          
       <FlatList
         data={reviews}
         renderItem={({ item }) => (
