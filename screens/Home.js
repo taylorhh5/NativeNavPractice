@@ -16,22 +16,21 @@ export default function Home(props) {
     {
       title: "Zelda, Breath of Fresh Air",
       rating: 5,
-      body: "lorem ipsum",
+      body: " Descripton 1",
       key: 1,
     },
     {
       title: "Gotta catch Them All(again)",
       rating: 4,
-      body: "lorem ipsum",
+      body: "Description 2",
       key: 2,
     },
-    { title: 'Not So "Final" Fantasy', rating: 3, body: "lorem ipsum", key: 3 },
+    { title: 'Not So "Final" Fantasy', rating: 3, body: "Description 3", key: 3 },
   ]);
   return (
     <View>
 <Button  title="Review Details"   onPress={()=> props.navigation.push("Review")}/>
           
-            <Text>Review</Text>
           
       <FlatList
         data={reviews}
