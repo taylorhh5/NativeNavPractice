@@ -29,14 +29,14 @@ export default function Home(props) {
   ]);
   return (
     <View>
-<Button  title="Review Details"   onPress={()=> props.navigation.push("Review")}/>
+<Button  title="About"   onPress={()=> props.navigation.push("About")}/>
           
           
       <FlatList
         data={reviews}
         renderItem={({ item }) => (
             <TouchableOpacity 
-            onPress={()=> props.navigation.navigate({name: 'About', params: {item}})}>
+            onPress={()=> props.navigation.navigate({name: 'Review', params: {item}})}>
    
           
             <Text>{item.title}</Text>
