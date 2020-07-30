@@ -5,7 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./screens/Home";
 import About from "./screens/About";
-import ReviewDetails from './screens/ReviewDetails.js'
+import ReviewDetails from "./screens/ReviewDetails.js";
 
 const NavTool = createStackNavigator();
 
@@ -13,10 +13,10 @@ export default function App() {
   return (
     <NavigationContainer>
       <NavTool.Navigator>
-        <NavTool.Screen name="About" component={About} />
-        <NavTool.Screen name="Home" component={Home} />
-        <NavTool.Screen name="Review" component={ReviewDetails} />
+        <NavTool.Screen name="Home Page" component={Home} />
 
+        <NavTool.Screen name="About" component={About} />
+        <NavTool.Screen name="Review" component={ReviewDetails} />
       </NavTool.Navigator>
     </NavigationContainer>
   );
