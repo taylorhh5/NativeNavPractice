@@ -10,7 +10,7 @@ export default function ReviewDetails({ navigation, route }) {
       <Button title="Home page" onPress={() => navigation.push("Home Page")} />
       {/* {route.params ? <Text> {route.params.item.title}</Text>      
  : null} */}
- <View >
+ <View style={style.container}>
       <Text> {route.params.item.title}</Text>
       <Text> {route.params.item.body}</Text>
       <Text> Rating:{route.params.item.rating}</Text>
@@ -22,8 +22,11 @@ export default function ReviewDetails({ navigation, route }) {
   );
 }
 
-const styles=StyleSheet.create({
+const style=StyleSheet.create({
 container:{
+
+    backgroundColor:"red",
     padding:24,
+   
 }
 });

@@ -28,11 +28,12 @@ export default function Home(props) {
     { title: 'Not So "Final" Fantasy', rating: 3, body: "Description 3", key: 3 },
   ]);
   return (
-    <View>
+    <View style={style.container}>
 <Button  title="About"   onPress={()=> props.navigation.push("About")}/>
           
           
       <FlatList
+      style={style.listContainer}
         data={reviews}
         renderItem={({ item }) => (
             <TouchableOpacity 
@@ -50,3 +51,16 @@ export default function Home(props) {
     </View>
   );
 }
+
+const style=StyleSheet.create({
+
+container:{
+ 
+  flex: 1,
+  // backgroundColor: "yellow",
+},
+listContainer:{
+ 
+marginTop:15,
+},
+});

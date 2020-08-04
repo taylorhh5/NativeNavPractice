@@ -5,7 +5,7 @@ export default function About(props) {
 
 
   return (
-    <View>
+    <View >
       <Button  title="Home"   onPress={()=> props.navigation.push("Home Page")}/>
 
       <Text>About Screen</Text>
@@ -14,8 +14,8 @@ export default function About(props) {
   );
 }
 
-// const styles=StyleSheet.create({
-// container:{
-//     padding:24,
-// }
-// });
+const styles=StyleSheet.create({
+container:{
+    padding:24,
+}
+});
