@@ -12,8 +12,17 @@ const NavTool = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <NavTool.Navigator>
-        <NavTool.Screen name="Home Page" component={Home} />
+      <NavTool.Navigator
+         screenOptions={{
+          headerStyle: {
+            backgroundColor: '#FF6D00',
+          },
+          headerTintColor: '#ffff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },}}>
+      
+        <NavTool.Screen  name="Home Page" component={Home} />
 
         <NavTool.Screen name="About" component={About} />
         <NavTool.Screen name="Review" component={ReviewDetails} />
@@ -22,10 +31,10 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "yellow",
     alignItems: "center",
     justifyContent: "center",
   },
