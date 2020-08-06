@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../screens/Home";
 import ReviewDetails from "../screens/ReviewDetails";
+import Header from "../Header";
 const NavTool = createStackNavigator();
 
 const HomeStack = createStackNavigator();
@@ -11,14 +12,21 @@ const HomeStack = createStackNavigator();
 export default function Navigations() {
   return (
     <HomeStack.Navigator>
-      <HomeStack.Screen name="Home" component={Home} />
+     
       <HomeStack.Screen
-        name="Details"
-        component={ReviewDetails}
-        options={({ route }) => ({
-          title: route.params.name,
+        name="Home"
+        component={Home}
+        options={() => ({
+          headerTitle: () => <Header title="HOME" />,
         })}
       />
+         {/* <HomeStack.Screen
+        name="Details"
+        component={ReviewDetails}
+        options={() => ({
+            headerTitle: () => <Header title="ddd" />,
+          })}
+      /> */}
     </HomeStack.Navigator>
   );
 }

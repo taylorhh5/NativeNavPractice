@@ -7,12 +7,12 @@ export default function ReviewDetails({ navigation, route }) {
     <View>
       <Text>Review Details Screen</Text>
       <Button title="Home page" onPress={() => navigation.navigate("Home Page")} />
-      <Button
+      {/* <Button
       title="React Native by Example"
       onPress={() =>
         navigation.navigate("Home Page", { name: "React Native by Example " })
-      }
-    />
+      } */}
+    {/* /> */}
       {route.params ? (
         <View style={style.container}>
           <Text> {route.params.item.title}</Text>

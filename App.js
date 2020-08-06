@@ -9,6 +9,7 @@ import Home from "./screens/Home";
 import About from "./screens/About";
 import ReviewDetails from "./screens/ReviewDetails.js";
 import Navigations from './routes/Navigations'
+import AboutNavigation from './routes/AboutNavigator'
 
 const NavTool = createStackNavigator();
 
@@ -30,7 +31,8 @@ export default function App() {
       
         <Drawer.Screen  name="Home Page" component={Navigations} />
 
-        <Drawer.Screen name="About" component={About} />
+        <Drawer.Screen  name="About" component={AboutNavigation} />
+
         <Drawer.Screen name="Review" component={ReviewDetails} />
       </Drawer.Navigator>
      
