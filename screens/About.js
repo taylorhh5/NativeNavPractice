@@ -5,16 +5,17 @@ export default function About(props) {
 
 
   return (
-    <View >
-      <Button  title="Home"   onPress={()=> props.navigation.push("Home Page")}/>
+    <View style={style.container}>
+      {/* <Button  title="Home"   onPress={()=> props.navigation.push("Home Page")}/> */}
 
       <Text>About Screen</Text>
-  
+      <Button  title="Drawer"   onPress={()=> props.navigation.toggleDrawer()}/>
+
     </View>
   );
 }
 
-const styles=StyleSheet.create({
+const style=StyleSheet.create({
 container:{
     padding:24,
 }

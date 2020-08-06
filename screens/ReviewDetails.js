@@ -13,7 +13,7 @@ export default function ReviewDetails({ navigation, route }) {
  <View style={style.container}>
       <Text> {route.params.item.title}</Text>
       <Text> {route.params.item.body}</Text>
-      <Text> Rating: {route.params.item.rating}</Text>
+      <Text> Rating:{route.params.item.rating}</Text>
       </View>
       {/* <View style={container}>
     <Text style={text}>React Native</Text>
