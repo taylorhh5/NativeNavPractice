@@ -8,6 +8,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import Home from "./screens/Home";
 import About from "./screens/About";
 import ReviewDetails from "./screens/ReviewDetails.js";
+import Navigations from './routes/Navigations'
 
 const NavTool = createStackNavigator();
 
@@ -27,7 +28,7 @@ export default function App() {
             fontWeight: 'bold',
           },}}>
       
-        <Drawer.Screen  name="Home Page" component={Home} />
+        <Drawer.Screen  name="Home Page" component={Navigations} />
 
         <Drawer.Screen name="About" component={About} />
         <Drawer.Screen name="Review" component={ReviewDetails} />

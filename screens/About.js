@@ -6,9 +6,9 @@ export default function About(props) {
 
   return (
     <View style={style.container}>
-      {/* <Button  title="Home"   onPress={()=> props.navigation.push("Home Page")}/> */}
+      <Button  title="Home"   onPress={()=> props.navigation.navigate("Home Page")}/>
 
-      <Text>About Screen</Text>
+      <Text>About </Text>
       <Button  title="Drawer"   onPress={()=> props.navigation.toggleDrawer()}/>
 
     </View>

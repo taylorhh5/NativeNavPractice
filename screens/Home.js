@@ -29,7 +29,7 @@ export default function Home(props) {
   ]);
   return (
     <View style={style.container}>
-<Button  title="About"   onPress={()=> props.navigation.push("About")}/>
+<Button  title="About"   onPress={()=> props.navigation.navigate("About")}/>
           
           
       <FlatList
