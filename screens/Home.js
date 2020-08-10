@@ -25,42 +25,52 @@ export default function Home(props) {
       body: "Description 2",
       key: 2,
     },
-    { title: 'Not So "Final" Fantasy', rating: 3, body: "Description 3", key: 3 },
+    {
+      title: 'Not So "Final" Fantasy',
+      rating: 3,
+      body: "Description 3",
+      key: 3,
+    },
   ]);
   return (
     <View style={style.container}>
-<Button  title="About"   onPress={()=> props.navigation.navigate("About")}/>
-          
-          
+      <Button
+        title="About"
+        onPress={() => props.navigation.navigate("About")}
+      />
+
       <FlatList
-      style={style.listContainer}
+        style={style.listContainer}
         data={reviews}
         renderItem={({ item }) => (
-            <TouchableOpacity 
-            onPress={()=> props.navigation.navigate({name: 'Review', params: {item}})}>
-   
-          
-            <Text>{item.title}</Text>
+          <TouchableOpacity
+            onPress={() =>
+              props.navigation.navigate({ name: "Review", params: { item } })
+            }
+          >
+            <Text style={style.title}>{item.title}</Text>
           </TouchableOpacity>
         )}
       />
-    
-      
+
       {/* <Text>Home Screen</Text> */}
       {/* <Button title="About" onPress={() => props.navigation.push("About")} /> */}
     </View>
   );
 }
 
-const style=StyleSheet.create({
-
-container:{
- 
-  flex: 1,
-  // backgroundColor: "yellow",
-},
-listContainer:{
- 
-marginTop:15,
-},
+const style = StyleSheet.create({
+  container: {
+    flex: 1,
+    // backgroundColor: "yellow",
+  },
+  listContainer: {
+    alignSelf: "center",
+    marginTop: 15,
+  },
+  title:{
+    fontWeight:"bold",
+    fontSize:20,
+    marginTop:8,
+  }
 });
