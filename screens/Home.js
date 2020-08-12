@@ -8,8 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { globalStyles } from "../styles/global";
-// import { NavigationContainer } from '@react-navigation/native';
-// import { createStackNavigator } from '@react-navigation/stack';
+
 
 export default function Home(props) {
   const [reviews, setReviews] = useState([
@@ -53,8 +52,7 @@ export default function Home(props) {
         )}
       />
 
-      {/* <Text>Home Screen</Text> */}
-      {/* <Button title="About" onPress={() => props.navigation.push("About")} /> */}
+      
     </View>
   );
 }
