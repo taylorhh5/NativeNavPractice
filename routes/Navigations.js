@@ -20,13 +20,7 @@ export default function Navigations() {
           headerTitle: () => <Header title="HOME" />,
         })}
       />
-         {/* <HomeStack.Screen
-        name="Details"
-        component={ReviewDetails}
-        options={() => ({
-            headerTitle: () => <Header title="ddd" />,
-          })}
-      /> */}
+    
     </HomeStack.Navigator>
   );
 }

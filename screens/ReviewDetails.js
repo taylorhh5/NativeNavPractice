@@ -20,9 +20,7 @@ export default function ReviewDetails({ navigation, route }) {
           <Text> Rating:{route.params.item.rating}</Text>
         </View>
       ) : null}
-      {/* <View style={container}>
-    <Text style={text}>React Native</Text>
-  </View> */}
+   
     </View>
   );
 }
