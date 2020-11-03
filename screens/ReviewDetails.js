@@ -3,9 +3,10 @@ import { View, Text, Button, StyleSheet } from "react-native";
 
 export default function ReviewDetails({ navigation, route }) {
   if (!route.params) <Text>...loading</Text>;
+  console.log(route,"ROUTEEEEEE")
   return (
     <View>
-      <Text>Review Details Screen</Text>
+      <Text>Review  Screen</Text>
       <Button title="Home page" onPress={() => navigation.navigate("Home Page")} />
       {/* <Button
       title="React Native by Example"

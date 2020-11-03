@@ -31,10 +31,13 @@ export default function Home(props) {
       key: 3,
     },
   ]);
+
+  //Passing Reviews to Flatlist as Data.
+  //Rendering data in ReviewDetails Component (We named "Review" in App.js Draw.Screen)
   return (
     <View style={style.container}>
       <Button
-        title="About"
+        title="Go to about page"
         onPress={() => props.navigation.navigate("About")}
       />
 

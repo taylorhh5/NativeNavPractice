@@ -15,7 +15,9 @@ const NavTool = createStackNavigator();
 
 const Drawer = createDrawerNavigator();
 
-
+//Navigation Conatiner > Drawer Navigation > Drawer Screen
+//Whichever Drawer.Screen Component first is home page
+//Home Page and About components actually coming from homestack navigatior in routes folder. This gives these pages homestack hamburger
 export default function App() {
   return (
     <NavigationContainer>
@@ -28,10 +30,10 @@ export default function App() {
           headerTitleStyle: {
             fontWeight: 'bold',
           },}}>
-      
+
         <Drawer.Screen  name="Home Page" component={Navigations} />
 
-        <Drawer.Screen  name="About" component={AboutNavigation} />
+              <Drawer.Screen  name="About" component={About} />
 
         <Drawer.Screen name="Review" component={ReviewDetails} />
       </Drawer.Navigator>

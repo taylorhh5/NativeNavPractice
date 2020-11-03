@@ -10,6 +10,9 @@ const NavTool = createStackNavigator();
 
 const AboutStack = createStackNavigator();
 
+
+//Navigator surrounds Screen
+
 export default function AboutNavigation() {
   return (
     <AboutStack.Navigator>
